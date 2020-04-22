@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-colour: #FC766A;
+    --secondary-color: #52667A;
+    --background-colour: #00203F;
+    --grid-border: 1px solid var(--primary-colour);
+    --svg-size: 3vmax;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--background-colour);
+    color: var(--primary-colour);
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-size: 2vmax;
+}
+
+#page-container {
+    display: flex;
+    width: 100vw;
+    height: 80%;
+    margin: 10vh 0 10vh;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+#grid-container {
+    height: 40vmax;
+    max-height: 600px;
+    width: 40vmax;
+    max-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+button {
+    font-size: 1.5vmax;
+    background: none;
+    border: none;
+    cursor: pointer, touch;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+#start-game {
+    width: 40vmax;
+    height: 3vmax;
+    color: var(--primary-colour);
+    background: none;
+    padding: 4px;
+    border: 0.15vmax solid var(--primary-colour);
+}
+
+#start-game:hover {
+    background-color: var(--secondary-color);
+}
+
+#player-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    fill: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.player > input {
+    font-size: 2vmax;
+    width: 50%;
+    background: none;
+    color: var(--primary-colour);
+    border: none;
+    margin: 20px 0px 20px;
+}
+
+.player > input::placeholder {
+    color: var(--secondary-color);
+}
+
+.selected {
+    fill: var(--primary-colour);
+}
+
+.divider {
+    width: 40vmax;
+    height: 0.3vmax;
+    background: var(--secondary-color);
+}
+
