@@ -19,3 +19,26 @@ const gameBoard = (() => {
 
         return {squares}
 }) ();
+
+const players = (() => {
+    const player1 = {
+        name: 'player 1',
+        marker: 'X',
+        isFirstMove: false,
+        positions: [],
+        score: 0,
+    }
+
+    const player2 = {
+        name: 'player 2',
+        marker: 'O',
+        isFirstMove: false,
+        positions: [],
+        score: 0,
+    }
+
+    const markers= [player1.marker, player2.marker];
+
+    return {player1, player2, markers}
+    
+})();
