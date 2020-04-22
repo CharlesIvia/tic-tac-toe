@@ -42,6 +42,18 @@ h4 {
     grid-template-rows: repeat(3, 1fr);
 }
 
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: var(--grid-border);
+    text-align: center;
+    font-size: xx-large;
+    color: #FC766A;
+}
+
 button {
     font-size: 1.5vmax;
     background: none;
@@ -106,4 +118,3 @@ button:disabled {
     height: 0.3vmax;
     background: var(--secondary-color);
 }
-
