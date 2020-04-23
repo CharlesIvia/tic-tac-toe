@@ -60,4 +60,27 @@ const game = () => {
         if(totalMoves.length >= 9) return "We have a Draw!";
         return "no result"
     }
+
+    const placeMaker = (player, square) => {
+        square.setAttribute('data-inside', player.marker);
+        square.classList.add(player.marker);
+        square.innerHTML = player.marker;
+    }
+
+    const squareIsEmpty = (square) => square.dataset.inside === "empty";
+
+    const endOfGame = (result) => {
+        gameBoard.squares.forEach(square => square.removeEventListener('click', handleTurn));
+        domEl,gameInfo.innerHTML = result;
+    }
+
+    const handleTurn = (e) => {
+        if(!squareIsEmpty(e.target)) return;
+        placeMaker(turn, e.target);
+        let result = getResult(turn, e.target);
+        (result == "no result") ? nextTurn() : endOfGame(result);
+        return;
+    }
+
+    
 }
