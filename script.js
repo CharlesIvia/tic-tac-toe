@@ -82,5 +82,16 @@ const game = () => {
         return;
     }
 
+    const clearBoard = () => {
+        gameBoard.squares.forEach(square.removeEventListener('click', handleTurn));
+        gameBoard.squares.forEach(square => {
+            square.setAttribute('data-inside', 'empty');
+            square.classList.remove('X', 'O');
+            square.innerHTML = '';
+        });
+        domEl.gameInfo.innerHTML = `Enjoyed the game? Play again!`;
+        domEl.startGameButton.removeEventListener('click', clearBoard);
+    }
+
     
 }
