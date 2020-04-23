@@ -93,5 +93,15 @@ const game = () => {
         domEl.startGameButton.removeEventListener('click', clearBoard);
     }
 
-    
-}
+    const resetGame = () => {
+        gameBoard.squares.forEach(square.addEventListener('click', handleTurn));
+        players.player1.positions.length = 0;
+        players.player2.positions.length = 0;
+    };
+
+    domEl.startGameButton.addEventListener('click', clearBoard);
+    resetGame();
+
+    return {resetGame};
+
+};
