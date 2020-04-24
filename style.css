@@ -76,6 +76,7 @@ button:disabled {
     background: none;
     padding: 4px;
     border: 0.15vmax solid var(--primary-colour);
+    margin-top: 20px;
 }
 
 #start-game:hover {
@@ -159,6 +160,7 @@ button:disabled {
 
     h4 {
         font-size: larger;
+        margin-top: 20px;
     }
 
     svg {
